@@ -9,3 +9,13 @@ function censor(inStr) {
     }
     return inStr;
 }
+function getCensoredWord() {
+    return censoredWord.concat(customCensoredWord);
+}
+function addCensoredWord(word) {
+    customCensoredWord.push(word);
+}
+
+module.exports.censor=censor;
+module.exports.censoredWord=addCensoredWord;
+module.exports.customCensoredWord=getCensoredWord;
